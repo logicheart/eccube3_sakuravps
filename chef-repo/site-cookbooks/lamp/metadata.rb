@@ -1,0 +1,13 @@
+name             'lap'
+maintainer       'LogicHeart'
+maintainer_email 'hiroyasu.yamada@logicheart.biz'
+license          'All rights reserved'
+description      'Installs/Configures CentOS6,Apache,PHP environment'
+long_description IO.read(File.join(File.dirname(__FILE__), 'README.md'))
+version          '1.0.0'
+depends          'yum-epel'
+depends          'selinux'
+depends          'iptables'
+depends          'clamav', '~> 1.2.0'
+depends          'ntp'
+depends          'php'

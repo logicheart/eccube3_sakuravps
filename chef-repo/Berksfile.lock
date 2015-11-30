@@ -1,0 +1,25 @@
+DEPENDENCIES
+  sakuravps
+    path: site-cookbooks/sakuravps
+
+GRAPH
+  apt (2.9.2)
+  clamav (1.2.0)
+    apt (~> 2.1)
+    cron (~> 1.2)
+    logrotate (~> 1.0)
+    yum (~> 3.0)
+    yum-epel (~> 0.2)
+  compat_resource (12.5.14)
+  cron (1.7.0)
+  iptables (2.0.1)
+    compat_resource (>= 0.0.0)
+  logrotate (1.9.2)
+  sakuravps (1.0.0)
+    clamav (~> 1.2.0)
+    iptables (>= 0.0.0)
+    selinux (>= 0.0.0)
+  selinux (0.9.0)
+  yum (3.8.2)
+  yum-epel (0.6.5)
+    yum (~> 3.2)

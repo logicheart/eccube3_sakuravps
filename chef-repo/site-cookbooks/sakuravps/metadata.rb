@@ -1,0 +1,10 @@
+name             'sakuravps'
+maintainer       'hiroyasu55(LogicHeart)'
+maintainer_email 'hiroyasu.yamada@logicheart.biz'
+license          'All rights reserved'
+description      'Initialize SAKURA Internet VPS environment(CentOS 6)'
+long_description IO.read(File.join(File.dirname(__FILE__), 'README.md'))
+version          '1.0.0'
+depends          'selinux'
+depends          'iptables'
+depends          'clamav', '~> 1.2.0'

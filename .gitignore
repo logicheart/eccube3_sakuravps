@@ -1,0 +1,5 @@
+.DS_Store
+.vagrant
+composer.phar
+!.gitkeep
+!.gitmodule
