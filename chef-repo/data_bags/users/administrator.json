@@ -1,0 +1,8 @@
+{
+  "id": "1000",
+  "name": "admin",
+  "comment": "Administrator",
+  "password": "$1$eCoTPhGl$SgbuqABM1.cUO4uh543ry0",
+  "ssh": true,
+  "wheel": true
+}

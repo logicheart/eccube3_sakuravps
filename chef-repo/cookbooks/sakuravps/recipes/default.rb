@@ -25,5 +25,5 @@ execute "yum update" do
   action :run
 end
 
-# ユーザー
-#include_recipe "createuser"
+# ユーザー作成
+include_recipe "sakuravps::users"

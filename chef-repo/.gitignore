@@ -6,5 +6,8 @@
 .chef/*.pem
 .chef/encrypted_data_bag_secret
 
-clients
-nodes
+cookbooks
+clients/*
+!clients/.gitkeep
+nodes/*
+!nodes/.gitkeep
