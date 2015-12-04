@@ -1,9 +1,0 @@
-{
-  "id": "admin",
-  "name": "admin",
-  "password": "$1$zQEMVjFl$gkW8nvmUxmblt9gW2crjV/",
-  "ssh_public_key": "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAACAQCsVY79SKzwCUV3jy7kfn5xfnuspP2hd349bEjQWOnbIeTpkOeDko4+HYCpE8zhmyT37HIOOZDIH7Fpq63GDIPQLtCfEEYTXJAuU/w4shi6yCj9hMDlTwFXlrOs1R3YyV7gkrODUyG5xN5beL7lRVdt+0Rm4Ya6/73M4EIaByYR62FQldsxdIqCb2Kt65Qkx1wKlzAaPl0Wxqz1n5630ROUxDsrRXWt4edgHDyW1o3UaaDfIdrL5DNKsNDRo6aS7AKaBHLFGfHBhR1+DHoty5rq+s9F+jYN5/7QTrkS6tQGNSREjdJYjWTK1E6WadyG60WFNaKS3luyYhqkFqX4HvEHp+suyiARu5woSvWV/0ykVkhKJcY2dDL1NxfT0ycGhyH8QV07ABQDiSjgK2sA2pPDRIjk8jYFyZps5GATmP6mS0mhwW+RWdoW1PGh7b07LyFC83TcXQCkiz09JxUncnPWzxeka5H/r5DlqAHbPZEL26eQjTDEICAtrmDa4CHlW/B8SLYVWHFRryw3cnQjlg1etN6TBNVDHulRDWq3lzwN8+f+lzEOfR26uAAtENto0vYG0Dy/C5T9R7tWGzvZ4xJDwaEz0FJxtxfwj7+3SvMHV1JLiAZ3VE8tveT0o4mrtEmYCzmcD+9F2WtHYjV2jO0hEvPCE+jEx566Gp0aM2VwoQ== user@USER-no-MacBook-Air.local",
-  "group": "admin",
-  "comment": "Administrator",
-  "wheel": true
-}
