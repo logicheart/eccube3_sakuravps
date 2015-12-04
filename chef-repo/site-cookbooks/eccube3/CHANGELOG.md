@@ -1,11 +1,11 @@
-lamp CHANGELOG
+eccube3 CHANGELOG
 ==============
 
-This file is used to list changes made in each version of the lamp cookbook.
+This file is used to list changes made in each version of the eccube3 cookbook.
 
 0.1.0
 -----
-- [LogicHeart] - Initial release of lamp
+- [LogicHeart] - Initial release of eccube3
 
 - - -
 Check the [Markdown Syntax Guide](http://daringfireball.net/projects/markdown/syntax) for help with Markdown.

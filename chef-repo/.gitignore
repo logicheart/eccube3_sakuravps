@@ -7,7 +7,3 @@
 .chef/encrypted_data_bag_secret
 
 cookbooks
-clients/*
-!clients/.gitkeep
-nodes/*
-!nodes/.gitkeep

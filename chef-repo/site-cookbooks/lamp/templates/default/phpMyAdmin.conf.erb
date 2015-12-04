@@ -1,0 +1,10 @@
+Alias /phpMyAdmin /usr/share/phpMyAdmin
+<Directory /usr/share/phpMyAdmin>
+  AllowOverride all
+  Order allow,deny
+  allow from all
+  AuthType Basic
+  AuthName "Please Enter Your Password"
+  AuthUserFile <%= @auth_file %>
+  Require valid-user
+</Directory>

@@ -26,4 +26,7 @@ execute "yum update" do
 end
 
 # ユーザー作成
-include_recipe "sakuravps::users"
+include_recipe "sakuravps::createuser"
+
+# SSH
+include_recipe "openssh"

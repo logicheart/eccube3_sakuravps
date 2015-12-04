@@ -1,4 +1,8 @@
 DEPENDENCIES
+  eccube3
+    path: site-cookbooks/eccube3
+  lamp
+    path: site-cookbooks/lamp
   sakuravps
     path: site-cookbooks/sakuravps
 
@@ -12,14 +16,29 @@ GRAPH
     yum-epel (~> 0.2)
   compat_resource (12.5.14)
   cron (1.7.0)
+  eccube3 (1.0.0)
   iptables (2.0.1)
     compat_resource (>= 0.0.0)
+  lamp (1.0.0)
+    mysql (~> 5.6)
+    yum-remi (>= 0.0.0)
   logrotate (1.9.2)
+  mysql (5.6.3)
+    yum-mysql-community (>= 0.0.0)
+  openssh (1.5.2)
+    iptables (>= 0.0.0)
   sakuravps (1.0.0)
     clamav (~> 1.2.0)
     iptables (>= 0.0.0)
+    openssh (>= 0.0.0)
     selinux (>= 0.0.0)
+    sudo (>= 0.0.0)
   selinux (0.9.0)
+  sudo (2.7.2)
   yum (3.8.2)
   yum-epel (0.6.5)
     yum (~> 3.2)
+  yum-mysql-community (0.1.21)
+    yum (>= 3.2)
+  yum-remi (0.1.0)
+    yum (>= 0.0.0)

@@ -1,14 +1,14 @@
 {
-    "name": "eccube3",
-    "description": "EC-CUBE 3 role defined as JSON",
-    "chef_type": "role",
-    "json_class": "Chef::Role",
-    "default_attributes": {
-    },
-    "override_attributes": {
-    },
-    "run_list": [
-        "recipe[lamp]",
-        "recipe[eccube3]"
-    ]
+  "name": "eccube3",
+  "description": "EC-CUBE 3 server role defined as JSON",
+  "chef_type": "role",
+  "json_class": "Chef::Role",
+  "default_attributes": {
+  },
+  "override_attributes": {
+  },
+  "run_list": [
+    "recipe[lamp]",
+    "recipe[eccube3]"
+  ]
 }

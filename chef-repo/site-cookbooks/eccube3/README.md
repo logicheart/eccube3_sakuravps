@@ -1,4 +1,4 @@
-lamp Cookbook
+eccube3 Cookbook
 =============
 TODO: Enter the cookbook description here.
 
@@ -11,14 +11,14 @@ TODO: List your cookbook requirements. Be sure to include any requirements this 
 
 e.g.
 #### packages
-- `toaster` - lamp needs toaster to brown your bagel.
+- `toaster` - eccube3 needs toaster to brown your bagel.
 
 Attributes
 ----------
 TODO: List your cookbook attributes here.
 
 e.g.
-#### lamp::default
+#### eccube3::default
 <table>
   <tr>
     <th>Key</th>
@@ -27,7 +27,7 @@ e.g.
     <th>Default</th>
   </tr>
   <tr>
-    <td><tt>['lamp']['bacon']</tt></td>
+    <td><tt>['eccube3']['bacon']</tt></td>
     <td>Boolean</td>
     <td>whether to include bacon</td>
     <td><tt>true</tt></td>
@@ -40,13 +40,13 @@ Usage
 TODO: Write usage instructions for each cookbook.
 
 e.g.
-Just include `lamp` in your node's `run_list`:
+Just include `eccube3` in your node's `run_list`:
 
 ```json
 {
   "name":"my_node",
   "run_list": [
-    "recipe[lamp]"
+    "recipe[eccube3]"
   ]
 }
 ```

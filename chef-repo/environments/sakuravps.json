@@ -1,15 +1,12 @@
 {
-    "name": "sakuravps",
-    "description": "SAKURA Internet VPS environment defined as JSON",
-    "chef_type": "environment",
-    "json_class": "Chef::Environment",
-    "default_attributes": {
-    },
-    "override_attributes": {
-    },
-    "cookbook_versions": {
-    },
-    "run_list": [
-        "recipe[sakuravps]"
-    ]
+  "name": "sakuravps",
+  "description": "SAKURA Internet VPS environment defined as JSON",
+  "chef_type": "environment",
+  "json_class": "Chef::Environment",
+  "default_attributes": {
+  },
+  "override_attributes": {
+  },
+  "cookbook_versions": {
+  }
 }

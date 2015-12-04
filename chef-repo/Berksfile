@@ -1,5 +1,5 @@
 source "https://supermarket.getchef.com"
 
 cookbook "sakuravps", path: "./site-cookbooks/sakuravps"
-#cookbook "lamp", path: "./site-cookbooks/lamp"
-#cookbook "eccube3", path: "./site-cookbooks/eccube3"
+cookbook "lamp", path: "./site-cookbooks/lamp"
+cookbook "eccube3", path: "./site-cookbooks/eccube3"
