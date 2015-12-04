@@ -1,7 +1,10 @@
 #!/bin/bash
 
 CURRENTDIR=$(dirname $0)
-. $CURRENTDIR/server.conf
+. $CURRENTDIR/conf/server.conf
+if [ $? -ne 0 ] ; then
+  exit 1
+fi
 
 KNIFE_USER=root
 CHEF_REPO_DIR="${CURRENTDIR}/chef-repo"
@@ -74,11 +77,10 @@ if [ -e nodes/${NODE_NAME}.json ] ; then
   echo -n "Node '${NODE_NAME}' exists, passed."
 else
   if [ "$KNIFE_USER" == "$USER_NAME" ] ; then
-    cmd="knife zero bootstrap ${HOST_NAME} -x ${KNIFE_USER} -i ${SSH_KEY} --sudo -N ${NODE_NAME} -E sakuravps"
+    knife zero bootstrap ${HOST_NAME} -x ${KNIFE_USER} -i ${SSH_KEY} --sudo -N ${NODE_NAME} -E sakuravps
   else
-    cmd="knife zero bootstrap ${HOST_NAME} -x ${KNIFE_USER} -N ${NODE_NAME} -E sakuravps"
+    knife zero bootstrap ${HOST_NAME} -x ${KNIFE_USER} -N ${NODE_NAME} -E sakuravps
   fi
-  $cmd
   if [ $? -ne 0 ] ; then
     echo "Failure!"
     exit 1
