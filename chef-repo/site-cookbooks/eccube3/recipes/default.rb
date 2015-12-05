@@ -18,14 +18,14 @@ directory base_dir do
   group eccube['group']
   mode 0755
   action :create
-  notifies :create, "cookbook_file[zip file]"
 end
 
 # EC-CUBE ZIPファイルを配置
 eccube_file = "eccube-#{version}.zip"
 tempfile = "/tmp/#{eccube_file}"
+eccube_dir = "#{base_dir}/eccube-#{version}"
 cookbook_file "zip file" do
-  not_if { File.directory?("#{base_dir)}/eccube-#{version}"}
+  not_if { File.directory?(eccube_dir) }
   path tempfile
   source eccube_file
   action :create
@@ -34,6 +34,7 @@ end
 
 # EC-CUBEを展開
 execute "extract zip file" do
+  not_if { File.directory?(eccube_dir) }
   command "unzip -o -d #{base_dir} #{tempfile}"
   action :run
   notifies :run, "execute[change owner]", :immediately
@@ -70,10 +71,8 @@ root_password = db['root_password'] || node['mysql']['server_root_password']
 database = db['name']
 user = db['user']
 password = db['password']
-sqlfile = "/tmp/createdb.sql"
-
-template "createsql" do
-  path sqlfile
+sqlfile = Chef::Config[:file_cache_path] + "/" + Date.today.strftime('%Y%m%d%H%M%S') + "createdb.sql"
+template sqlfile do
   source "createdb.sql.erb"
   variables({
     :database => database,
