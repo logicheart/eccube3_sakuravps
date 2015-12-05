@@ -43,13 +43,12 @@ package "phpMyAdmin" do
   action :install
   options "--enablerepo=remi --enablerepo=remi-php56"
 end
-
 pma = node["phpMyAdmin"]
 execute 'htpasswd' do
-  command "htpasswd -bc #{pma['auth_file']} #{pma['user']} #{pma['password']}"
+  only_if { pma['auth_file'] }
+  command "htpasswd -bc #{pma['auth_file']} #{pma['auth_user']} #{pma['auth_password']}"
   action :run
 end
-
 template "/etc/httpd/conf.d/phpMyAdmin.conf" do
   variables({
     :auth_file => node["phpMyAdmin"]["auth_file"]

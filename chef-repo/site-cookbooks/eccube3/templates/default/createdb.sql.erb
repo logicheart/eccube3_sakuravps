@@ -1,0 +1,5 @@
+DROP DATABASE IF EXISTS <%= @database %>;
+CREATE DATABASE <%= @database %> CHARACTER SET utf8 COLLATE utf8_general_ci;
+GRANT ALL ON <%= @database %>.* TO '<%= @user %>'@'localhost' IDENTIFIED BY '<%= @password %>';
+GRANT ALL ON <%= @database %>.* TO '<%= @user %>'@'%' IDENTIFIED BY '<%= @password %>';
+FLUSH PRIVILEGES;

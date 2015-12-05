@@ -1,0 +1,35 @@
+{
+  "name": "default",
+  "description": "SAKURA Internet VPS environment defined as JSON",
+  "chef_type": "environment",
+  "json_class": "Chef::Environment",
+  "default_attributes": {
+  },
+  "override_attributes": {
+    "httpd": {
+      "docroot_dir": "/var/www/html"
+    },
+    "mysql": {
+      "server_root_password": "eccube3"
+    },
+    "phpMyAdmin": {
+      "server_root_password": "/var/www/.htpasswd",
+      "auth_file": "/var/www/.htpasswd",
+      "auth_user": "phpmyadmin",
+      "auth_password": "sakuravps"
+    },
+    "eccube3": {
+      "version": "3.0.6",
+      "user": "admin",
+      "group": "admin",
+      "document_root": "/var/www/html",
+      "database": {
+        "name": "eccube",
+        "user": "eccube",
+        "password": "eccube3eccube"
+      }
+    }
+  },
+  "cookbook_versions": {
+  }
+}

@@ -12,6 +12,9 @@ SSH_DIR="${HOME}/.ssh"
 SSH_KEY_FILE_NAME="id_rsa_${NODE_NAME}"
 SSH_KEY="${SSH_DIR}/${SSH_KEY_FILE_NAME}"
 SSH_PUB_KEY="${SSH_KEY}.pub"
+if [ "a$ENVIRONMENT" == "a" ] ; then
+  ENVIRONMENT=default
+fi
 
 # Create SSH key file
 echo "-- Create SSH keys --"
@@ -52,13 +55,12 @@ if [ -e $json_file ] ; then
   echo "User file '${json_file}' exists, passed."
 else
   if [ "a${USER_GROUP}" == "a" ] ; then USER_GROUP=$USER_NAME ; fi
-  crypted_password=$(openssl passwd -1 "${USER_PASSWORD}")
   ssh_key_content=$(cat ${SSH_PUB_KEY})
   cat << EOH > $json_file
 {
   "id": "${USER_NAME}",
   "name": "${USER_NAME}",
-  "password": "${crypted_password}",
+  "password": "${USER_PASSWORD}",
   "ssh_public_key": "${ssh_key_content}",
   "group": "${USER_GROUP}",
   "comment": "Administrator",
@@ -77,9 +79,9 @@ if [ -e nodes/${NODE_NAME}.json ] ; then
   echo -n "Node '${NODE_NAME}' exists, passed."
 else
   if [ "$KNIFE_USER" == "$USER_NAME" ] ; then
-    knife zero bootstrap ${HOST_NAME} -x ${KNIFE_USER} -i ${SSH_KEY} --sudo -N ${NODE_NAME} -E sakuravps
+    knife zero bootstrap ${HOST_NAME} -x ${KNIFE_USER} -i ${SSH_KEY} --sudo -N ${NODE_NAME} -E ${ENVIRONMENT}
   else
-    knife zero bootstrap ${HOST_NAME} -x ${KNIFE_USER} -N ${NODE_NAME} -E sakuravps
+    knife zero bootstrap ${HOST_NAME} -x ${KNIFE_USER} -N ${NODE_NAME} -E ${ENVIRONMENT}
   fi
   if [ $? -ne 0 ] ; then
     echo "Failure!"

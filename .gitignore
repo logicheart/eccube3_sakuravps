@@ -1,5 +1,6 @@
 .DS_Store
 .vagrant
 composer.phar
+conf/*.conf
 !.gitkeep
 !.gitmodule

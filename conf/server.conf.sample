@@ -1,4 +1,5 @@
 HOST_NAME="sample.vs.sakura.ne.jp"
 NODE_NAME="sample"
 USER_NAME="admin"
-USER_PASSWORD="sakuravps"
+USER_PASSWORD="$1$L8WSSauh$SONP44lQ9XwI/DQ52fTsH."
+ENVIRONMENT="default"
