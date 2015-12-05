@@ -1,7 +1,6 @@
 default['eccube3']['version'] = "3.0.5"
 default['eccube3']['user'] = "eccube"
 default['eccube3']['group'] = "eccube"
-default['eccube3']['document_root'] = "/var/www/eccube"
 default['eccube3']['database']['name'] = "eccube"
 default['eccube3']['database']['user'] = "eccube"
 default['eccube3']['database']['password'] = "eccube"

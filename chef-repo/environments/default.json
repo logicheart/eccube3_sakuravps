@@ -22,7 +22,7 @@
       "version": "3.0.6",
       "user": "admin",
       "group": "admin",
-      "document_root": "/var/www/html",
+      "base_dir": "/var/www/html",
       "database": {
         "name": "eccube",
         "user": "eccube",

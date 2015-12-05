@@ -1,3 +1,8 @@
+<VirtualHost *:80>
+    ServerName <%= @server_name %>
+    DocumentRoot "<%= @document_root %>"
+</VirtualHost>
+
 <Directory "<%= @document_root %>">
     Options FollowSymLinks
     AllowOverride All
