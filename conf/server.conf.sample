@@ -1,5 +1,13 @@
+# server.conf サンプル
+
+# ホスト名（さくらVPSコントロールで確認）
 HOST_NAME="sample.vs.sakura.ne.jp"
+# ノード名（基本的にホスト名の先頭でOK）
 NODE_NAME="sample"
+# sudo権限を持つユーザー（特に問題がなければadminで）
 USER_NAME="admin"
+# ユーザーのパスワード（openssl passwd -1 "******" コマンドでハッシュ化した文字列。）
+# 下記は"admin"の例
 USER_PASSWORD="$1$L8WSSauh$SONP44lQ9XwI/DQ52fTsH."
+# 環境（chef-repo/envirinments/XXX.jsonのXXX部分）
 ENVIRONMENT="default"

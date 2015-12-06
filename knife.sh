@@ -45,7 +45,7 @@ EOH
 fi
 echo
 
-ssh ${NODE_NAME} "exit" >/dev/null 2>&1
+ssh ${USER_NAME}@${HOST_NAME} -i ${SSH_KEY} "exit" >/dev/null 2>&1
 if [ $? -eq 0 ] ; then KNIFE_USER=${USER_NAME} ; fi
 
 # Create user data file (in data_bags)
